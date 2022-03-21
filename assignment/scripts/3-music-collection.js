@@ -36,7 +36,7 @@ addToCollection('Random Access Memories', 'Daft Punk', 2013);
 addToCollection('The Mollusk', 'Ween', 1997);
 addToCollection('Harvest', 'Neil Young', 1972);
 
-console.log(collection);
+console.log(collection); // DONE
 
 // - Add a function named `showCollection`. This function should:
 //   - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
@@ -55,11 +55,11 @@ function showCollection(array) {
       array[i].yearPublished
     );
   }
-}
+} // DONE
 
 // - Test the `showCollection` function.
 
-showCollection(collection);
+showCollection(collection); // DONE
 
 // - Add a function named `findByArtist`. This function should:
 //   - Take in `artist` (a string) parameter
@@ -67,6 +67,7 @@ showCollection(collection);
 //   - Loop through the `collection` and add any objects with a matching artist to the array.
 //   - Return the array with the matching results. If no results are found, return an empty array.
 
+// ORIGINAL
 function findByArtist(artist, array) {
   let artistArray = [];
   for (let i = 0; i < array.length; i++) {
