@@ -91,7 +91,7 @@ console.log(
   findByArtist('Ween', collection)
 );
 console.log(
-  'test: this should log an array with each A Tribe Called Quest album within',
+  'test: this should log two arrays with each A Tribe Called Quest album within',
   findByArtist('A Tribe Called Quest', collection)
 );
 console.log(
