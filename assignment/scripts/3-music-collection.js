@@ -44,7 +44,7 @@ console.log(collection);
 //   - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
 
 function showCollection(array) {
-  console.log(array.length);
+  console.log('number of items in array:', array.length);
   for (let i = 0; i < array.length; i++) {
     // `TITLE by ARTIST, published in YEAR`
     console.log(
@@ -67,7 +67,37 @@ showCollection(collection);
 //   - Loop through the `collection` and add any objects with a matching artist to the array.
 //   - Return the array with the matching results. If no results are found, return an empty array.
 
+function findByArtist(artist, array) {
+  let artistArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (artist === array[i].artist) {
+      artistArray.push(array[i]);
+      return artistArray;
+    }
+  }
+  return [];
+}
+
 // - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
+
+addToCollection(
+  "People's Instinctive Travels and the Paths of Rhythm",
+  'A Tribe Called Quest',
+  1990
+); // I'm adding this second A Tribe Called Quest album to test if 'A Tribe Called Quest' will show up twice within the findByArtist function.
+
+console.log(
+  'test: this should log an array with Ween within',
+  findByArtist('Ween', collection)
+);
+console.log(
+  'test: this should log an array with A Tribe Called Quest within',
+  findByArtist('A Tribe Called Quest', collection)
+);
+console.log(
+  'test: this should log an empty array',
+  findByArtist('Grateful Dead', collection)
+);
 
 // > When testing your functions, write all tests in the JavaScript file!
 
