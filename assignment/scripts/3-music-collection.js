@@ -13,13 +13,13 @@ let collection = [];
 //   - Return the newly created object
 
 function addToCollection(title, artist, yearPublished) {
-  let newObject = {
+  let newAlbum = {
     titleName: title,
     artistName: artist,
-    year: yearPublished,
+    yearReleased: yearPublished,
   };
 
-  collection.push(newObject);
+  collection.push(newAlbum);
   // .push newObject into collection array
 } // end of addToCollection
 // DONE
@@ -29,7 +29,12 @@ function addToCollection(title, artist, yearPublished) {
 //   - Console.log each album as added using the returned value.
 //   - After all are added, console.log the `collection` array.
 
-addToCollection('Free Fallin', 'Tom Petty', 1989);
+addToCollection('The Low End Theory', 'A Tribe Called Quest', 1991);
+addToCollection('Van Halen II', 'Van Halen', 1979);
+addToCollection('The Band', 'The Band', 1969);
+addToCollection('Random Access Memories', 'Daft Punk', 2013);
+addToCollection('The Mollusk', 'Ween', 1997);
+addToCollection('Harvest', 'Neil Young', 1972);
 
 console.log(collection);
 
