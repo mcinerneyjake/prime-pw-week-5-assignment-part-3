@@ -14,9 +14,9 @@ let collection = [];
 
 function addToCollection(title, artist, yearPublished) {
   let newAlbum = {
-    titleName: title,
-    artistName: artist,
-    yearReleased: yearPublished,
+    title: title,
+    artist: artist,
+    yearPublished: yearPublished,
   };
 
   collection.push(newAlbum);
@@ -43,7 +43,23 @@ console.log(collection);
 //   - Console.log the number of items in the array.
 //   - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
 
+function showCollection(array) {
+  console.log(array.length);
+  for (let i = 0; i < array.length; i++) {
+    // `TITLE by ARTIST, published in YEAR`
+    console.log(
+      array[i].title,
+      'by',
+      array[i].artist,
+      'published in',
+      array[i].yearPublished
+    );
+  }
+}
+
 // - Test the `showCollection` function.
+
+showCollection(collection);
 
 // - Add a function named `findByArtist`. This function should:
 //   - Take in `artist` (a string) parameter
