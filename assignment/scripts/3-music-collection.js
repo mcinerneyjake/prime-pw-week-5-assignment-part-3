@@ -73,10 +73,9 @@ function findByArtist(artist, array) {
   for (let i = 0; i < array.length; i++) {
     if (artist === array[i].artist) {
       artistArray.push(array[i]);
-      return artistArray;
     }
   }
-  return [];
+  return artistArray;
 }
 
 // - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
@@ -88,11 +87,11 @@ addToCollection(
 ); // I'm adding this second A Tribe Called Quest album to test if 'A Tribe Called Quest' will show up twice within the findByArtist function.
 
 console.log(
-  'test: this should log an array with Ween within',
+  'test: this should log an array with one Ween album within',
   findByArtist('Ween', collection)
 );
 console.log(
-  'test: this should log an array with A Tribe Called Quest within',
+  'test: this should log an array with each A Tribe Called Quest album within',
   findByArtist('A Tribe Called Quest', collection)
 );
 console.log(
