@@ -148,18 +148,23 @@ console.log(
 );
 
 console.log(
-  "this should return Van Halen's Van Halen II from 1979:",
-  search({ artist: 'Van Halen', year: 1979 })
+  "this should return A Tribe Called Quest's The Low End Theory from 1991:",
+  search({ artist: 'A Tribe Called Quest', year: 1991 })
 );
 
 console.log(
-  'this should return an empty array because the artist is not within the collection:',
-  search({ artist: 'Boston' })
+  'this should return an empty array because both the artist and the year are not within the collection:',
+  search({ artist: 'Boston', year: 1976 })
 );
 
 console.log(
-  'this should return an empty array because the year is not within the collection:',
-  search({ year: 1983 })
+  'this should return an empty array because only the year is included within the object parameter:',
+  search({ year: 1979 })
+);
+
+console.log(
+  'this should return an empty array because only the artist is included within the object parameter:',
+  search({ artist: 'Van Halen' })
 );
 
 console.log('this should return the entire collection:', search()); // DONE
