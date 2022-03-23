@@ -36,7 +36,7 @@ addToCollection('Random Access Memories', 'Daft Punk', 2013);
 addToCollection('The Mollusk', 'Ween', 1997);
 addToCollection('Harvest', 'Neil Young', 1972);
 
-console.log(collection); // DONE
+console.log('these albums are in the collection:', collection); // DONE
 
 // - Add a function named `showCollection`. This function should:
 //   - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
@@ -44,7 +44,7 @@ console.log(collection); // DONE
 //   - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
 
 function showCollection(array) {
-  console.log('number of items in array:', array.length);
+  console.log('number of objects in array:', array.length);
   for (let i = 0; i < array.length; i++) {
     // `TITLE by ARTIST, published in YEAR`
     console.log(
@@ -76,7 +76,7 @@ function findByArtist(artist, array) {
     }
   }
   return artistArray;
-}
+} // DONE
 
 // - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
 
@@ -112,6 +112,46 @@ console.log(
 //     - Return a new array of all items in the `collection` matching *all* of the search criteria.
 //     - If no results are found, return an empty array.
 //     - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
+
+function search(searchedItem) {
+  let searchArray = [];
+
+  if (searchedItem === null || searchedItem === undefined) {
+    searchArray = collection;
+    return searchArray;
+    //console.log('nothing entered');
+  } // end if nothing entered
+
+  for (let record of collection) {
+    if (
+      searchedItem.artist === record.artist &&
+      searchedItem.year === record.yearPublished
+    ) {
+      searchArray.push(record);
+      //console.log('found the match');
+    } // end if found
+    else if (
+      searchedItem.artist !== record.artist ||
+      searchedItem.year !== record.yearPublished
+    ) {
+      //console.log('did not find match');
+      searchArray;
+    } // end if not found
+  } // end of check
+  return searchArray;
+} // end search() function
+
+console.log(
+  "this should return Neil Young's Harvest from 1972:",
+  search({ artist: 'Neil Young', year: 1972 })
+);
+
+console.log(
+  'this should return an empty array because the artist and yearPublished are not within the collection:',
+  search({ artist: 'Boston', year: 1976 })
+);
+
+console.log('this should return the entire collection:', search()); // DONE
 
 // - Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. You will need to update the functions to support this new property:
 //   - Update the `addToCollection` function to also take an input parameter for the array of tracks.
