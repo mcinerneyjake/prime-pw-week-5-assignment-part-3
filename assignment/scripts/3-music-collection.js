@@ -141,14 +141,25 @@ function search(searchedItem) {
   return searchArray;
 } // end search() function
 
+// TESTS FOR search() FUNCTION
 console.log(
   "this should return Neil Young's Harvest from 1972:",
   search({ artist: 'Neil Young', year: 1972 })
 );
 
 console.log(
-  'this should return an empty array because the artist and yearPublished are not within the collection:',
-  search({ artist: 'Boston', year: 1976 })
+  "this should return Van Halen's Van Halen II from 1979:",
+  search({ artist: 'Van Halen', year: 1979 })
+);
+
+console.log(
+  'this should return an empty array because the artist is not within the collection:',
+  search({ artist: 'Boston' })
+);
+
+console.log(
+  'this should return an empty array because the year is not within the collection:',
+  search({ year: 1983 })
 );
 
 console.log('this should return the entire collection:', search()); // DONE
@@ -166,5 +177,7 @@ console.log('this should return the entire collection:', search()); // DONE
 //     1. NAME: DURATION
 //     2. NAME: DURATION
 // ```
+
+let tracks = [];
 
 // > Make sure to test all your code!
