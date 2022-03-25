@@ -31,20 +31,20 @@ function addToCollection(title, artist, yearPublished, trackList) {
 //   - After all are added, console.log the `collection` array.
 
 addToCollection('The Low End Theory', 'A Tribe Called Quest', 1991, {
-  track1: 'Excursions',
-  track2: "Buggin' Out",
-  track3: 'Rap Promoter',
-  track4: 'Butter',
-  track5: 'Verses From the Abstract',
-  track6: 'Show Business',
-  track7: 'Vibes and Stuff',
-  track8: 'The Infamous Date Rape',
-  track9: 'Check The Rhime',
-  track10: 'Everything Is Fair',
-  track11: "Jazz (We've Got)",
-  track12: 'Skypager',
-  track13: 'What?',
-  track14: 'Scenario',
+  track1: { trackName: 'Excursions', duration: '3:54' },
+  track2: { trackName: "Buggin' Out", duration: '3:37' },
+  track3: { trackName: 'Rap Promoter', duration: '2:13' },
+  track4: { trackName: 'Butter', duration: '3:38' },
+  track5: { trackName: 'Verses From the Abstract', duration: '3:58' },
+  track6: { trackName: 'Show Business', duration: '3:53' },
+  track7: { trackName: 'Vibes and Stuff', duration: '4:17' },
+  track8: { trackName: 'The Infamous Date Rape', duration: '2:53' },
+  track9: { trackName: 'Check The Rhime', duration: '3:36' },
+  track10: { trackName: 'Everything Is Fair', duration: '2:58' },
+  track11: { trackName: "Jazz (We've Got)", duration: '4:10' },
+  track12: { trackName: 'Skypager', duration: '2:12' },
+  track13: { trackName: 'What?', duration: '2:28' },
+  track14: { trackName: 'Scenario', duration: '4:10' },
 });
 addToCollection('Van Halen II', 'Van Halen', 1979);
 addToCollection('The Band', 'The Band', 1969);
@@ -83,7 +83,6 @@ showCollection(collection); // DONE
 //   - Loop through the `collection` and add any objects with a matching artist to the array.
 //   - Return the array with the matching results. If no results are found, return an empty array.
 
-// ORIGINAL
 function findByArtist(artist, array) {
   let artistArray = [];
   for (let i = 0; i < array.length; i++) {
@@ -129,6 +128,7 @@ console.log(
 //     - If no results are found, return an empty array.
 //     - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
 
+// Search function by artist and year ONLY
 function search(searchedItem) {
   let searchArray = [];
 
