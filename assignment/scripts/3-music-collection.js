@@ -12,15 +12,16 @@ let collection = [];
 //   - Add the new object to the end of the `collection` array
 //   - Return the newly created object
 
-function addToCollection(title, artist, yearPublished) {
+function addToCollection(title, artist, yearPublished, trackList) {
   let newAlbum = {
     title: title,
     artist: artist,
     yearPublished: yearPublished,
+    trackList: trackList,
   };
 
   collection.push(newAlbum);
-  // .push newObject into collection array
+  // .push newAlbum into collection array
 } // end of addToCollection
 // DONE
 
@@ -29,7 +30,22 @@ function addToCollection(title, artist, yearPublished) {
 //   - Console.log each album as added using the returned value.
 //   - After all are added, console.log the `collection` array.
 
-addToCollection('The Low End Theory', 'A Tribe Called Quest', 1991);
+addToCollection('The Low End Theory', 'A Tribe Called Quest', 1991, {
+  track1: 'Excursions',
+  track2: "Buggin' Out",
+  track3: 'Rap Promoter',
+  track4: 'Butter',
+  track5: 'Verses From the Abstract',
+  track6: 'Show Business',
+  track7: 'Vibes and Stuff',
+  track8: 'The Infamous Date Rape',
+  track9: 'Check The Rhime',
+  track10: 'Everything Is Fair',
+  track11: "Jazz (We've Got)",
+  track12: 'Skypager',
+  track13: 'What?',
+  track14: 'Scenario',
+});
 addToCollection('Van Halen II', 'Van Halen', 1979);
 addToCollection('The Band', 'The Band', 1969);
 addToCollection('Random Access Memories', 'Daft Punk', 2013);
@@ -182,7 +198,5 @@ console.log('this should return the entire collection:', search()); // DONE
 //     1. NAME: DURATION
 //     2. NAME: DURATION
 // ```
-
-let tracks = [];
 
 // > Make sure to test all your code!
