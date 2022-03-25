@@ -146,7 +146,14 @@ function showCollection(array) {
     //     1. NAME: DURATION
     //     2. NAME: DURATION
     //     3. NAME: DURATION
-    console.log(array[i].title, 'by', array[i].artist, ', published in', array[i].yearPublished, ':');
+    console.log(
+      array[i].title.toUpperCase(),
+      'by',
+      array[i].artist.toUpperCase(),
+      ', published in',
+      array[i].yearPublished,
+      ':'
+    );
     for (let track of array[i].trackList) {
       console.log(track.trackNumber, track.trackName, ':', track.duration);
     }
@@ -215,14 +222,14 @@ function search(searchedItem) {
       //console.log('did not find match');
       searchArray;
     } // end if not found
-    // for (let track of record) {
-    //   if (searchedItem.track === )
-    // }
   } // end of check
+
   return searchArray;
 } // end search() function
 
 // TESTS FOR search() FUNCTION
+console.log('this should return the entire collection:', search());
+
 console.log("this should return Neil Young's Harvest from 1972:", search({ artist: 'Neil Young', year: 1972 }));
 
 console.log(
@@ -245,7 +252,7 @@ console.log(
   search({ artist: 'Van Halen' })
 );
 
-console.log('this should return the entire collection:', search()); // DONE
+// DONE
 
 // - Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. You will need to update the functions to support this new property:
 //   - Update the `addToCollection` function to also take an input parameter for the array of tracks.
