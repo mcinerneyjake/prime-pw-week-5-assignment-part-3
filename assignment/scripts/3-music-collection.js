@@ -30,27 +30,102 @@ function addToCollection(title, artist, yearPublished, trackList) {
 //   - Console.log each album as added using the returned value.
 //   - After all are added, console.log the `collection` array.
 
-addToCollection('The Low End Theory', 'A Tribe Called Quest', 1991, {
-  track1: { trackName: 'Excursions', duration: '3:54' },
-  track2: { trackName: "Buggin' Out", duration: '3:37' },
-  track3: { trackName: 'Rap Promoter', duration: '2:13' },
-  track4: { trackName: 'Butter', duration: '3:38' },
-  track5: { trackName: 'Verses From the Abstract', duration: '3:58' },
-  track6: { trackName: 'Show Business', duration: '3:53' },
-  track7: { trackName: 'Vibes and Stuff', duration: '4:17' },
-  track8: { trackName: 'The Infamous Date Rape', duration: '2:53' },
-  track9: { trackName: 'Check The Rhime', duration: '3:36' },
-  track10: { trackName: 'Everything Is Fair', duration: '2:58' },
-  track11: { trackName: "Jazz (We've Got)", duration: '4:10' },
-  track12: { trackName: 'Skypager', duration: '2:12' },
-  track13: { trackName: 'What?', duration: '2:28' },
-  track14: { trackName: 'Scenario', duration: '4:10' },
-});
-addToCollection('Van Halen II', 'Van Halen', 1979);
-addToCollection('The Band', 'The Band', 1969);
-addToCollection('Random Access Memories', 'Daft Punk', 2013);
-addToCollection('The Mollusk', 'Ween', 1997);
-addToCollection('Harvest', 'Neil Young', 1972);
+addToCollection('The Low End Theory', 'A Tribe Called Quest', 1991, [
+  { trackName: 'Excursions', duration: '3:54' },
+  { trackName: "Buggin' Out", duration: '3:37' },
+  { trackName: 'Rap Promoter', duration: '2:13' },
+  { trackName: 'Butter', duration: '3:38' },
+  { trackName: 'Verses From the Abstract', duration: '3:58' },
+  { trackName: 'Show Business', duration: '3:53' },
+  { trackName: 'Vibes and Stuff', duration: '4:17' },
+  { trackName: 'The Infamous Date Rape', duration: '2:53' },
+  { trackName: 'Check The Rhime', duration: '3:36' },
+  { trackName: 'Everything Is Fair', duration: '2:58' },
+  { trackName: "Jazz (We've Got)", duration: '4:10' },
+  { trackName: 'Skypager', duration: '2:12' },
+  { trackName: 'What?', duration: '2:28' },
+  { trackName: 'Scenario', duration: '4:10' },
+]);
+addToCollection('Van Halen II', 'Van Halen', 1979, [
+  { trackName: 'Excursions', duration: '3:54' },
+  { trackName: "Buggin' Out", duration: '3:37' },
+  { trackName: 'Rap Promoter', duration: '2:13' },
+  { trackName: 'Butter', duration: '3:38' },
+  { trackName: 'Verses From the Abstract', duration: '3:58' },
+  { trackName: 'Show Business', duration: '3:53' },
+  { trackName: 'Vibes and Stuff', duration: '4:17' },
+  { trackName: 'The Infamous Date Rape', duration: '2:53' },
+  { trackName: 'Check The Rhime', duration: '3:36' },
+  { trackName: 'Everything Is Fair', duration: '2:58' },
+  { trackName: "Jazz (We've Got)", duration: '4:10' },
+  { trackName: 'Skypager', duration: '2:12' },
+  { trackName: 'What?', duration: '2:28' },
+  { trackName: 'Scenario', duration: '4:10' },
+]);
+addToCollection('The Band', 'The Band', 1969, [
+  { trackName: 'Excursions', duration: '3:54' },
+  { trackName: "Buggin' Out", duration: '3:37' },
+  { trackName: 'Rap Promoter', duration: '2:13' },
+  { trackName: 'Butter', duration: '3:38' },
+  { trackName: 'Verses From the Abstract', duration: '3:58' },
+  { trackName: 'Show Business', duration: '3:53' },
+  { trackName: 'Vibes and Stuff', duration: '4:17' },
+  { trackName: 'The Infamous Date Rape', duration: '2:53' },
+  { trackName: 'Check The Rhime', duration: '3:36' },
+  { trackName: 'Everything Is Fair', duration: '2:58' },
+  { trackName: "Jazz (We've Got)", duration: '4:10' },
+  { trackName: 'Skypager', duration: '2:12' },
+  { trackName: 'What?', duration: '2:28' },
+  { trackName: 'Scenario', duration: '4:10' },
+]);
+addToCollection('Random Access Memories', 'Daft Punk', 2013, [
+  { trackName: 'Excursions', duration: '3:54' },
+  { trackName: "Buggin' Out", duration: '3:37' },
+  { trackName: 'Rap Promoter', duration: '2:13' },
+  { trackName: 'Butter', duration: '3:38' },
+  { trackName: 'Verses From the Abstract', duration: '3:58' },
+  { trackName: 'Show Business', duration: '3:53' },
+  { trackName: 'Vibes and Stuff', duration: '4:17' },
+  { trackName: 'The Infamous Date Rape', duration: '2:53' },
+  { trackName: 'Check The Rhime', duration: '3:36' },
+  { trackName: 'Everything Is Fair', duration: '2:58' },
+  { trackName: "Jazz (We've Got)", duration: '4:10' },
+  { trackName: 'Skypager', duration: '2:12' },
+  { trackName: 'What?', duration: '2:28' },
+  { trackName: 'Scenario', duration: '4:10' },
+]);
+addToCollection('The Mollusk', 'Ween', 1997, [
+  { trackName: 'Excursions', duration: '3:54' },
+  { trackName: "Buggin' Out", duration: '3:37' },
+  { trackName: 'Rap Promoter', duration: '2:13' },
+  { trackName: 'Butter', duration: '3:38' },
+  { trackName: 'Verses From the Abstract', duration: '3:58' },
+  { trackName: 'Show Business', duration: '3:53' },
+  { trackName: 'Vibes and Stuff', duration: '4:17' },
+  { trackName: 'The Infamous Date Rape', duration: '2:53' },
+  { trackName: 'Check The Rhime', duration: '3:36' },
+  { trackName: 'Everything Is Fair', duration: '2:58' },
+  { trackName: "Jazz (We've Got)", duration: '4:10' },
+  { trackName: 'Skypager', duration: '2:12' },
+  { trackName: 'What?', duration: '2:28' },
+  { trackName: 'Scenario', duration: '4:10' },
+]);
+addToCollection('Harvest', 'Neil Young', 1972, [
+  { trackName: 'Excursions', duration: '3:54' },
+  { trackName: "Buggin' Out", duration: '3:37' },
+  { trackName: 'Rap Promoter', duration: '2:13' },
+  { trackName: 'Butter', duration: '3:38' },
+  { trackName: 'Verses From the Abstract', duration: '3:58' },
+  { trackName: 'Show Business', duration: '3:53' },
+  { trackName: 'Vibes and Stuff', duration: '4:17' },
+  { trackName: 'The Infamous Date Rape', duration: '2:53' },
+  { trackName: 'Check The Rhime', duration: '3:36' },
+  { trackName: 'Everything Is Fair', duration: '2:58' },
+  { trackName: "Jazz (We've Got)", duration: '4:10' },
+  { trackName: 'Skypager', duration: '2:12' },
+  { trackName: 'What?', duration: '2:28' },
+  { trackName: 'Scenario', duration: '4:10' },
+]);
 
 console.log('these albums are in the collection:', collection); // DONE
 
@@ -62,14 +137,21 @@ console.log('these albums are in the collection:', collection); // DONE
 function showCollection(array) {
   console.log('number of objects in array:', array.length);
   for (let i = 0; i < array.length; i++) {
-    // `TITLE by ARTIST, published in YEAR`
+    //     TITLE by ARTIST, published in YEAR:
+    //     1. NAME: DURATION
+    //     2. NAME: DURATION
+    //     3. NAME: DURATION
     console.log(
       array[i].title,
       'by',
       array[i].artist,
-      'published in',
-      array[i].yearPublished
+      ', published in',
+      array[i].yearPublished,
+      ':'
     );
+    for (let track of array[i].trackList) {
+      console.log(track.trackName, track.duration);
+    }
   }
 } // DONE
 
