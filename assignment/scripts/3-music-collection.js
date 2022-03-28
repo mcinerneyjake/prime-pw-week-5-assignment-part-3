@@ -266,7 +266,7 @@ console.log(
 // TESTING INDIVIDUAL TRACKS WITHIN THE COLLECTION
 
 console.log(
-  'this should return the track "Old Man" with its artist, album, yearPublished, and duration within the collection:',
+  'this should return the track "Old Man" with its artist, album, yearPublished, and duration within the collection (there will be 2 separate objects):',
   search({ trackName: 'Old Man' })
 );
 
