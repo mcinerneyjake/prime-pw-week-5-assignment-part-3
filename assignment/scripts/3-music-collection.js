@@ -222,13 +222,22 @@ function search(searchedItem) {
       //console.log('did not find match');
       searchArray;
     } // end if not found
-  } // end of check
+    for (let track of record.trackList) {
+      if (searchedItem.trackName === track.trackName || searchedItem.duration === track.duration) {
+        searchArray.push(record, track);
+      }
+    } // end of check
+  }
 
   return searchArray;
 } // end search() function
 
 // TESTS FOR search() FUNCTION
+
+// TESTING EMPTY PARAMETERS
 console.log('this should return the entire collection:', search());
+
+// TESTING ARTIST AND YEARPUBLISHED PARAMETERS
 
 console.log("this should return Neil Young's Harvest from 1972:", search({ artist: 'Neil Young', year: 1972 }));
 
@@ -242,14 +251,23 @@ console.log(
   search({ artist: 'Boston', year: 1976 })
 );
 
+// TESTING PARAMETERS THAT ARE NOT WITHIN THE COLLECTION
+
 console.log(
-  'this should return an empty array because only the year is included within the object parameter:',
-  search({ year: 1979 })
+  'this should return an empty array because the year is not found within the collection:',
+  search({ year: 1492 })
 );
 
 console.log(
-  'this should return an empty array because only the artist is included within the object parameter:',
-  search({ artist: 'Van Halen' })
+  'this should return an empty array because the artist is not found within the collection:',
+  search({ artist: 'Steely Dan' })
+);
+
+// TESTING INDIVIDUAL TRACKS WITHIN THE COLLECTION
+
+console.log(
+  'this should return the track "Old Man" with its artist, album, yearPublished, and duration within the collection:',
+  search({ trackName: 'Old Man' })
 );
 
 // DONE
