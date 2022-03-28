@@ -203,7 +203,7 @@ console.log('test: this should log an empty array', findByArtist('Grateful Dead'
 //     - If no results are found, return an empty array.
 //     - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
 
-// Search function by artist and year ONLY
+// Search function by artist, year, or tracks
 function search(searchedItem) {
   let searchArray = [];
 
