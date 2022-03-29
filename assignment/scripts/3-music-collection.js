@@ -20,7 +20,7 @@ function addToCollection(title, artist, yearPublished, trackList) {
     trackList: trackList,
   };
 
-  collection.push(newAlbum);
+  return collection.push(newAlbum);
   // .push newAlbum into collection array
 } // end of addToCollection
 // DONE
